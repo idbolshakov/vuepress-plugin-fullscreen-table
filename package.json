@@ -1,0 +1,42 @@
+{
+  "name": "vuepress-plugin-fullscreen-table",
+  "version": "1.0.0",
+  "description": "VuePress plugin - fullscreen table",
+  "homepage": "https://github.com/idbolshakov/vuepress-plugin-fullscreen-table",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idbolshakov/vuepress-plugin-fullscreen-table.git"
+  },
+  "author": "idbolshakov@gmail.com",
+  "license": "MIT",
+  "main": "lib/fullscreenTablePlugin.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "prettier --write src/* package.json README.md",
+    "lint": "npm run lint:ts && npm run lint:css",
+    "lint:ts": "tsc --noEmit",
+    "lint:css": "stylelint src/client/**/*.css",
+    "build": "npm run build:client && npm run build:node",
+    "build:client": "esbuild ./src/client/index.js --bundle --outdir=src/gen --allow-overwrite --minify --entry-names=[name].client",
+    "build:node": "esbuild ./src/node/fullscreenTablePlugin.ts --bundle --outdir=lib --allow-overwrite --platform=node --format=esm --target=node22 --loader:.client.js=text --loader:.client.css=text"
+  },
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "plugin",
+    "fullscreen-table",
+    "fullscreen",
+    "table"
+  ],
+  "devDependencies": {
+    "@types/node": "24.1.0",
+    "esbuild": "0.25.8",
+    "prettier": "3.6.2",
+    "stylelint": "16.22.0",
+    "stylelint-config-standard": "38.0.0",
+    "typescript": "5.8.3"
+  }
+}

@@ -1,0 +1,25 @@
+.vuepress-plugin-fullscreen-table-wrapper button {
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    border 0.3s,
+    opacity 0.3s;
+  height: 32px;
+  color: var(--vp-c-text);
+  background: var(--vp-c-control);
+  border: 1px solid var(--vp-c-control);
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.vuepress-plugin-fullscreen-table-wrapper:hover button {
+  visibility: visible;
+  opacity: 0.75;
+}
+
+.vuepress-plugin-fullscreen-table-wrapper button:hover {
+  border: 1px solid var(--vp-c-accent-bg);
+  background-color: var(--vp-c-control-hover);
+  opacity: 1;
+}

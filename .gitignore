@@ -1,0 +1,8 @@
+# code artifacts
+src/gen/
+lib/
+node_modules/
+
+# vim
+*.swp
+

@@ -1,0 +1,47 @@
+.vuepress-plugin-fullscreen-table-modal button {
+  cursor: pointer;
+  transition: border 0.3s;
+  height: 32px;
+  color: var(--vp-c-text);
+  background: var(--vp-c-control);
+  border: 1px solid var(--vp-c-control);
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.vuepress-plugin-fullscreen-table-modal {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  overflow: hidden;
+}
+
+.vuepress-plugin-fullscreen-table-modal form {
+  display: flex;
+  justify-content: end;
+}
+
+.vuepress-plugin-fullscreen-table-modal div {
+  display: flex;
+  justify-content: center;
+}
+
+.vuepress-plugin-fullscreen-table-modal table {
+  max-height: calc(100vh - 70px);
+}
+
+.vuepress-plugin-fullscreen-table-modal th {
+  top: -1px;
+  position: sticky;
+  background: var(--vp-c-bg);
+  outline: 1px solid var(--vp-c-border-hard, #d1d4d7);
+}
+
+body:has(.vuepress-plugin-fullscreen-table-modal[open]) {
+  overflow: hidden;
+}
+
+.vuepress-plugin-fullscreen-table-modal button:hover {
+  border: 1px solid var(--vp-c-accent-bg);
+  background-color: var(--vp-c-control-hover);
+}
