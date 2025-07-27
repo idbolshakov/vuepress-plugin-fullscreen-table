@@ -1,6 +1,8 @@
 # vuepress-plugin-fullscreen-table
 
+![license](https://img.shields.io/npm/l/vuepress-plugin-fullscreen-table)
 ![check](https://img.shields.io/badge/VuePress-2.x-brightgreen)
+![npm](https://img.shields.io/npm/v/vuepress-plugin-fullscreen-table)
 
 `vuepress-plugin-fullscreen-table` is a plugin for `VuePress@2.x` that adds a fullscreen mode for tables to improve
 readability.
